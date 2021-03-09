@@ -53,7 +53,6 @@ class Root extends StatefulWidget {
 }
 
 class _RootState extends State<Root> {
-
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 

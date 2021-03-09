@@ -10,10 +10,7 @@ class Home extends StatefulWidget {
   final FirebaseAuth auth;
   final FirebaseFirestore firestore;
 
-  const Home({
-    this.auth,
-    this.firestore
-  });
+  const Home({this.auth, this.firestore});
 
   @override
   _HomeState createState() => _HomeState();
@@ -58,6 +55,9 @@ class _HomeState extends State<Home> {
                 children: [
                   Expanded(
                     child: TextFormField(
+                      keyboardType: TextInputType.multiline,
+                      maxLines: null,
+                      //textInputAction: TextInputAction.newline,
                       key: const ValueKey("addField"),
                       controller: _todoController,
                     ),
@@ -84,7 +84,7 @@ class _HomeState extends State<Home> {
             height: 20,
           ),
           const Text(
-            "Your Todos",
+            "Your Staff",
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
@@ -99,7 +99,7 @@ class _HomeState extends State<Home> {
                 if (snapshot.connectionState == ConnectionState.active) {
                   if (snapshot.data.isEmpty) {
                     return const Center(
-                      child: Text("You don't have any unfinished Todos"),
+                      child: Text("You don't have data"),
                     );
                   }
                   return ListView.builder(

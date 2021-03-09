@@ -36,9 +36,12 @@ class _LoginState extends State<Login> {
                   controller: _emailController,
                 ),
                 TextFormField(
+                  obscureText: true,
                   key: const ValueKey("password"),
                   textAlign: TextAlign.center,
-                  decoration: const InputDecoration(hintText: "Password"),
+                  decoration: const InputDecoration(
+                    hintText: "Password",
+                  ),
                   controller: _passwordController,
                 ),
                 const SizedBox(
@@ -68,7 +71,7 @@ class _LoginState extends State<Login> {
                   key: const ValueKey("createAccount"),
                   onPressed: () async {
                     final String retVal =
-                    await Auth(auth: widget.auth).createAccount(
+                        await Auth(auth: widget.auth).createAccount(
                       email: _emailController.text,
                       password: _passwordController.text,
                     );

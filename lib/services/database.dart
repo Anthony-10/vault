@@ -12,7 +12,7 @@ class Database {
           .collection("todos")
           .doc(uid)
           .collection("todos")
-          .where("done", isEqualTo: false)
+          // .where("done", isEqualTo: false)
           .snapshots()
           .map((query) {
         final List<TodoModel> retVal = <TodoModel>[];
@@ -28,29 +28,27 @@ class Database {
 
   Future<void> addTodo({String uid, String content}) async {
     try {
-      firestore
-          .collection("todos")
-          .doc(uid).collection("todos").add({
+      firestore.collection("todos").doc(uid).collection("todos").add({
         "content": content,
-      //  "done": false,
+        //  "done": false,
       });
     } catch (e) {
       rethrow;
     }
   }
 
-  Future<void> updateTodo({String uid, String todoId}) async {
-    try {
-      firestore
-          .collection("todos")
-          .doc(uid)
-          .collection("todos")
-          .doc(todoId)
-          .update({
-        "done": true,
-      });
-    } catch (e) {
-      rethrow;
-    }
-  }
+  // Future<void> updateTodo({String uid, String todoId}) async {
+  //   try {
+  //     firestore
+  //         .collection("todos")
+  //         .doc(uid)
+  //         .collection("todos")
+  //         .doc(todoId)
+  //         .update({
+  //       "done": true,
+  //     });
+  //   } catch (e) {
+  //     rethrow;
+  //   }
+  // }
 }

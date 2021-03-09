@@ -8,12 +8,12 @@ class TodoModel {
   TodoModel({
     this.todoId,
     this.content,
-   // this.done,
+    // this.done,
   });
 
   TodoModel.fromDocumentSnapshot({DocumentSnapshot documentSnapshot}) {
     todoId = documentSnapshot.id;
     content = documentSnapshot.data()['content'] as String;
-   // done = documentSnapshot.data()['done'] as bool;
+    // done = documentSnapshot.data()['done'] as bool;
   }
 }
