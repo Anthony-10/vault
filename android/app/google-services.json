@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "66649129702",
+    "project_id": "vaultplace",
+    "storage_bucket": "vaultplace.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66649129702:android:9988e70b0d055115d2b127",
+        "android_client_info": {
+          "package_name": "com.example.vaultplace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66649129702-7hnhij10c5ci5respkuvs9hl1ijbgjcr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxy-vSt5e94s0BbGShSN6wk7wt-ixrQ-8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66649129702-7hnhij10c5ci5respkuvs9hl1ijbgjcr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
